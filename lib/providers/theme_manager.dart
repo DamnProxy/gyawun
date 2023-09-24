@@ -19,7 +19,7 @@ class ThemeManager extends ChangeNotifier {
   Color _accentColor =
       Color(box.get('accentColor', defaultValue: ui_colors.accentColor.value));
   bool _isPitchBlack = box.get('isPitchBlack', defaultValue: false);
-  bool _isMaterialTheme = box.get('isMaterialTheme', defaultValue: false);
+  bool _isMaterialTheme = box.get('isMaterialTheme', defaultValue: true);
   bool _isRightToLeftDirection =
       box.get('isRightToLeftDirection', defaultValue: false);
   List<String> _languages = box.get('languages', defaultValue: ["English"]);
@@ -39,16 +39,16 @@ class ThemeManager extends ChangeNotifier {
   List<Map<String, dynamic>> get supportedLanguages => [
         {'code': 'ar', 'name': 'arabic'},
         {'code': 'en', 'name': 'english'},
-        {'code': 'es', 'name': 'spanish'},
-        {'code': 'fr', 'name': 'french'},
-        {'code': 'de', 'name': 'german'},
+        // {'code': 'es', 'name': 'spanish'},
+        // {'code': 'fr', 'name': 'french'},
+        // {'code': 'de', 'name': 'german'},
         {'code': 'hi', 'name': 'hindi'},
-        {'code': 'ja', 'name': 'japanese'},
-        {'code': 'ko', 'name': 'korean'},
+        // {'code': 'ja', 'name': 'japanese'},
+        // {'code': 'ko', 'name': 'korean'},
         {'code': 'ru', 'name': 'russian'},
         {'code': 'tr', 'name': 'turkish'},
         {'code': 'ur', 'name': 'urdu'},
-        {'code': 'zh', 'name': 'chinese'},
+        // {'code': 'zh', 'name': 'chinese'},
       ];
   Map<String, dynamic> get language => {
         'code': _language.toLowerCase(),
